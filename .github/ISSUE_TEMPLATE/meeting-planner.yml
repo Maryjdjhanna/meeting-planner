@@ -1,0 +1,179 @@
+name: Meeting Planner
+description: Plan and track a meeting using a structured template
+title: "Meeting Planner: "
+labels:
+  - meeting
+assignees: []
+body:
+  - type: input
+    id: date
+    attributes:
+      label: Date
+      placeholder: "2026-03-05"
+    validations:
+      required: true
+
+  - type: input
+    id: time
+    attributes:
+      label: Time
+      placeholder: "09:00-10:00"
+    validations:
+      required: true
+
+  - type: input
+    id: location_link
+    attributes:
+      label: Location / Link
+      placeholder: "Conference Room A or https://..."
+    validations:
+      required: false
+
+  - type: input
+    id: facilitator
+    attributes:
+      label: Facilitator
+      placeholder: "Name"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: timezone_1
+    attributes:
+      label: Timezone 1
+      description: Choose a timezone by major city
+      options:
+        - America/New_York (New York)
+        - America/Los_Angeles (Los Angeles)
+        - America/Chicago (Chicago)
+        - America/Toronto (Toronto)
+        - Europe/London (London)
+        - Europe/Paris (Paris)
+        - Europe/Berlin (Berlin)
+        - Europe/Dublin (Dublin)
+        - Africa/Johannesburg (Johannesburg)
+        - Asia/Dubai (Dubai)
+        - Asia/Kolkata (Mumbai)
+        - Asia/Singapore (Singapore)
+        - Asia/Hong_Kong (Hong Kong)
+        - Asia/Tokyo (Tokyo)
+        - Asia/Seoul (Seoul)
+        - Australia/Sydney (Sydney)
+        - Pacific/Auckland (Auckland)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: timezone_2
+    attributes:
+      label: Timezone 2
+      description: Choose a second timezone by major city
+      options:
+        - America/New_York (New York)
+        - America/Los_Angeles (Los Angeles)
+        - America/Chicago (Chicago)
+        - America/Toronto (Toronto)
+        - Europe/London (London)
+        - Europe/Paris (Paris)
+        - Europe/Berlin (Berlin)
+        - Europe/Dublin (Dublin)
+        - Africa/Johannesburg (Johannesburg)
+        - Asia/Dubai (Dubai)
+        - Asia/Kolkata (Mumbai)
+        - Asia/Singapore (Singapore)
+        - Asia/Hong_Kong (Hong Kong)
+        - Asia/Tokyo (Tokyo)
+        - Asia/Seoul (Seoul)
+        - Australia/Sydney (Sydney)
+        - Pacific/Auckland (Auckland)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: timezone_3
+    attributes:
+      label: Timezone 3
+      description: Choose a third timezone by major city
+      options:
+        - America/New_York (New York)
+        - America/Los_Angeles (Los Angeles)
+        - America/Chicago (Chicago)
+        - America/Toronto (Toronto)
+        - Europe/London (London)
+        - Europe/Paris (Paris)
+        - Europe/Berlin (Berlin)
+        - Europe/Dublin (Dublin)
+        - Africa/Johannesburg (Johannesburg)
+        - Asia/Dubai (Dubai)
+        - Asia/Kolkata (Mumbai)
+        - Asia/Singapore (Singapore)
+        - Asia/Hong_Kong (Hong Kong)
+        - Asia/Tokyo (Tokyo)
+        - Asia/Seoul (Seoul)
+        - Australia/Sydney (Sydney)
+        - Pacific/Auckland (Auckland)
+    validations:
+      required: true
+
+  - type: textarea
+    id: best_schedule
+    attributes:
+      label: Best Schedule Across 3 Timezones
+      description: Compare options and identify the best slot.
+      value: |
+        | Option | Date | Timezone 1 Time | Timezone 2 Time | Timezone 3 Time | Notes |
+        | --- | --- | --- | --- | --- | --- |
+        | A |  |  |  |  |  |
+        | B |  |  |  |  |  |
+        | C |  |  |  |  |  |
+
+        Selected Best Slot:
+    validations:
+      required: false
+
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objective
+    validations:
+      required: true
+
+  - type: textarea
+    id: attendees
+    attributes:
+      label: Attendees
+      value: |
+        - 
+    validations:
+      required: false
+
+  - type: textarea
+    id: agenda
+    attributes:
+      label: Agenda
+      value: |
+        1. 
+        2. 
+        3. 
+    validations:
+      required: false
+
+  - type: textarea
+    id: decisions_needed
+    attributes:
+      label: Decisions Needed
+      value: |
+        - 
+    validations:
+      required: false
+
+  - type: textarea
+    id: action_items
+    attributes:
+      label: Action Items
+      value: |
+        | Action Item | Owner | Due Date | Status |
+        | --- | --- | --- | --- |
+        |  |  |  |  |
+    validations:
+      required: false

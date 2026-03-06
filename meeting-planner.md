@@ -5,6 +5,15 @@ Time:
 Location / Link:
 Facilitator:
 
+## Meeting Type
+<select name="meeting-type">
+	<option value="">Select meeting type</option>
+	<option value="internal">Internal</option>
+	<option value="customer-facing">Customer Facing</option>
+	<option value="external-parties">External Parties</option>
+	<option value="event-planning">Event Planning</option>
+</select>
+
 ## Timezone Selection (Choose 3)
 - Timezone 1:
 - Timezone 2:

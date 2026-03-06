@@ -38,6 +38,18 @@ body:
       required: false
 
   - type: dropdown
+    id: meeting_type
+    attributes:
+      label: Meeting Type
+      options:
+        - Internal
+        - Customer Facing
+        - External Parties
+        - Event Planning
+    validations:
+      required: true
+
+  - type: dropdown
     id: timezone_1
     attributes:
       label: Timezone 1

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meeting Planner Across Regions</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <div class="header">
+      <h1>Meeting Planner Across Regions</h1>
+      <p>Find time slots that are inside working hours for everyone.</p>
+    </div>
+
+    <div class="content">
+      <div class="grid">
+        <div>
+          <label for="meetingDate">Meeting Date</label>
+          <input id="meetingDate" type="date" />
+        </div>
+        <div>
+          <label for="duration">Duration (minutes)</label>
+          <input id="duration" type="number" min="15" step="15" value="60" />
+        </div>
+        <div>
+          <label for="workStart">Workday Start (local)</label>
+          <input id="workStart" type="time" value="09:00" />
+        </div>
+        <div>
+          <label for="workEnd">Workday End (local)</label>
+          <input id="workEnd" type="time" value="17:00" />
+        </div>
+      </div>
+
+      <div class="attendees">
+        <p class="note">Add attendees, choose a region group (AMER, EMEA, APAC), then pick the region.</p>
+        <div id="attendeeList"></div>
+        <div class="row-actions">
+          <button class="btn btn-secondary" id="addAttendeeBtn" type="button">+ Add Attendee</button>
+        </div>
+      </div>
+
+      <div class="row-actions">
+        <button class="btn btn-primary" id="findSlotsBtn" type="button">Find Best Time Slots</button>
+      </div>
+
+      <div id="results"></div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
